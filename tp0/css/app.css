@@ -1,0 +1,32 @@
+/**
+ * Fichier css principal.
+ */
+
+body{
+  background-color: #3e5066;
+}
+.container{
+  margin-top: 100px;
+  width: 80%;
+  border-radius: 5px;
+  padding :50px;
+  background-color: #f2f2f2
+}
+.blockquote{
+  border-left: 2px solid black;
+}
+.jumbotron{
+  background-color: #e0e0e0;
+}
+.c3po{
+  width:150px;
+}
+form{
+  margin: auto;
+}
+.searchGlyph{
+  color:#ff5500;
+}
+.msgAlert{
+  padding-top: 30px;
+}
