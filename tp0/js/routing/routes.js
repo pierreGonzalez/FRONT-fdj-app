@@ -5,6 +5,7 @@ import Layout from '../layout';
 import Home from '../components/dumbComponents/home';
 import Jouer from '../components/smartComponents/jouer-container';
 import Archiver from '../components/smartComponents/archiver-container';
+import Login from '../components/dumbComponents/login';
 
 
 export default(
@@ -12,5 +13,6 @@ export default(
     <IndexRoute component={Home} />
     <Route path='/jouer' component={Jouer}/>
     <Route path='/archiver' component={Archiver}/>
+    <Route path='/login' component={Login}/>
   </Route>
 );

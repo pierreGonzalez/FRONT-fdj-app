@@ -1,5 +1,6 @@
 import React from 'react';
 import uuid from 'uuid';
+import { Button } from 'react-bootstrap';
 
 export default class Archiver extends React.Component {
 
@@ -84,8 +85,8 @@ export default class Archiver extends React.Component {
               <input className="form-control" id="inputDate" ref="date" type="date"/>
             </div>
             <div className="col-md-10">
-              <button type="button" onClick={this.archiver.bind(this)} className="btn btn-info btn-block"> <span className="glyphicon glyphicon-download-alt"></span> <p>{archive}</p></button>
-              <button type="button" onClick={this.resetChamps.bind(this)} className="btn btn-warning btn-block">Initialiser les champs <span className="glyphicon glyphicon-repeat"></span></button>
+              <Button type="button" onClick={this.archiver.bind(this)} bsStyle="info" bsSize="large" block> <span className="glyphicon glyphicon-download-alt"></span> <p>{archive}</p></Button>
+              <Button type="button" onClick={this.resetChamps.bind(this)} bsStyle="warning" bsSize="large" block>Initialiser les champs <span className="glyphicon glyphicon-repeat"></span></Button>
             </div>
           </form>
         </div>

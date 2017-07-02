@@ -40,7 +40,6 @@ const archiverReducer = (state,action) => {
       let cptEtoile = 0;
       let i;
       let j;
-      
       for(i=0; i<5; i++){
         if(action.objetArchive.numeros[i]>0 && action.objetArchive.numeros[i]<51){
           cptNumero++;

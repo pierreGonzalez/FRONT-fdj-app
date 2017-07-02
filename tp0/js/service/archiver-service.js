@@ -1,6 +1,6 @@
 
 export const requestObjetArchive = (objetArchive) => {
-  return fetch("http://localhost:8080/fdj/archiver",{
+  return fetch("http://localhost:8080/fdj/private/archiver",{
       headers:{
         'Accept':'application/json',
         'Content-type':'application/json'
