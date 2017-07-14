@@ -1,20 +1,47 @@
 import React from 'react';
-
+import { Link } from 'react-router';
 
 export default class Login extends React.Component {
 
-  loger(){
-    let emailFormat = /^[a-zA-Z\d.-]+@[a-zA-Z\d]{1,4}.[a-zA-Z]{2,3}$/
-    if(this.refs.email.value.match(emailFormat)){
-      console.log("@: ",this.refs.email.value,"pwd: ",this.refs.pwd.value);
-    }else{
+  loger(dispatch,e){
+    {/*let emailFormat = /^[a-zA-Z\d_-.]+@[a-zA-Z\d]{1,4}.[a-zA-Z]{2,3}$/*/}
+    let emailFormat = /[a-zA-Z\d-.]+/
+    let basicToken;
+    let token;
+    if(this.refs.user.value.match(emailFormat)){
+      token = this.refs.user.value+":"+this.refs.pwd.value;
+      this.props.doLogin(token);
 
+      this.refs.user.value = "";
+      this.refs.pwd.value = "";
+    }else{
+      {/*Trouver un moyen d'afficher un mesg d'erreur sans passer*/}
       console.log("format email not good !");
     }
     {/*Trouver un moyen de rediriger*/}
   }
+  logout(){
+    console.log("tentative de logout");
+  }
+
+  logButton(){
+    if(this.props.basicToken === ""){
+      return(
+        <Link className="btn btn-info" to="/listeTirages" onClick={this.loger.bind(this)}>
+          <span>login</span>
+        </Link>
+      );
+    } else{
+      return(
+        <Link className="btn btn-warning" to="/listeTirages" onClick={this.logout.bind(this)}>
+          <span>logout</span>
+        </Link>
+      );
+    }
+  }
 
   render () {
+    const loginButton = this.logButton();
 
     return (
       <div className="container">
@@ -23,14 +50,16 @@ export default class Login extends React.Component {
           <div className="panel-body">
             <form>
               <div className="form-group">
-                <label htmlFor="email">Email address:</label>
-                <input type="email" className="form-control" id="email" ref="email"/>
+                <label htmlFor="email">userName:</label>
+                <input type="text" className="form-control" id="user" ref="user"/>
               </div>
               <div className="form-group">
-                <label htmlFor="pwd">Password:</label>
+                <label htmlFor="pwd">passWord:</label>
                 <input type="password" className="form-control" id="pwd" ref="pwd"/>
               </div>
-              <button type="submit" onClick={this.loger.bind(this)} className="btn btn-info">Submit</button>
+              <div className="btn-group btn-group-justified">
+                {loginButton}
+              </div>
             </form>
           </div>
         </div>

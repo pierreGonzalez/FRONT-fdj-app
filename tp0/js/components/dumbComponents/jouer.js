@@ -2,6 +2,14 @@ import React from 'react';
 
 export default class Jouer extends React.Component {
 
+  componentDidMount(){
+    let dateDuJour = new Date();
+    let annee = dateDuJour.getFullYear();
+    let mois = dateDuJour.getMonth() < 9 ? "0" + (dateDuJour.getMonth()+1) : (dateDuJour.getMonth()+1);
+    let jour = dateDuJour.getDate() < 10 ? "0" + dateDuJour.getDate() : dateDuJour.getDate();
+    let dateBonFormat = annee +"-"+ mois +"-"+ jour;
+    this.refs.inputDate.value = dateBonFormat;
+  }
   sendDate(){
     this.props.sendDate(this.refs.inputDate.value);
   }

@@ -1,24 +1,21 @@
 import { connect } from 'react-redux';
-import { sendObjetArchive,resetChampsArchiver,controleChamps } from '../../actions/archiver-actions';
+import { sendObjetArchive,resetChampsArchiver,deleteArchive } from '../../actions/archiver-actions';
 import archiver from '../dumbComponents/archiver';
+import _ from 'lodash';
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownProps) => {
     return {
       archive: state.archive.message,
-      hidden: state.archive.hidden
+      tirage: _.find(state.listeTirages, {id: ownProps.params.id}) || {},
+      hidden: state.archive.hidden,
+      basicToken: state.basicToken
     }
 };
 
 const mapDispatchToProps = (dispatch) => {
   return{
-    sendObjetArchive: (objetArchive) => {
-      dispatch(sendObjetArchive(objetArchive));
-    },
-    resetChampsArchiver: () => {
-      dispatch(resetChampsArchiver());
-    },
-    controleChamps:(objetArchive)=>{
-      dispatch(controleChamps(objetArchive));
+    sendObjetArchive: (objetArchive,basicToken) => {
+      dispatch(sendObjetArchive(objetArchive,basicToken));
     }
   }
 };

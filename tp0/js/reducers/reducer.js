@@ -1,5 +1,7 @@
 import { SEND_DATE } from '../actions/jouer-actions';
 import { SEND_OBJET_ARCHIVE, RESET_CHAMPS_ARCHIVER,CONTROLE_CHAMPS } from '../actions/archiver-actions';
+import { LISTE_TIRAGES } from '../actions/listeTirages-actions';
+import { LOGIN } from '../actions/login-actions';
 
 const initialeState = {
   tirage: {
@@ -9,8 +11,10 @@ const initialeState = {
   },
   archive: {
     message: "Archiver",
-    hidden: true
-  }
+    hidden: false
+  },
+  listeTirages: [],
+  basicToken: ""
 };
 
 const jouerReducer = (state,action) => {
@@ -24,6 +28,27 @@ const jouerReducer = (state,action) => {
   }
 }
 
+const listeTiragesReducer = (state,action) => {
+  switch (action.type){
+    case LISTE_TIRAGES:{
+      return action.listeTirages;
+    }
+    default:{
+      return state.listeTirages;
+    }
+  }
+}
+
+const loginReducer = (state,action) => {
+  switch (action.type){
+    case LOGIN:{
+      return action.basicToken;
+    }
+    default:{
+      return state.basicToken;
+    }
+  }
+}
 
 const archiverReducer = (state,action) => {
   switch (action.type){
@@ -35,37 +60,17 @@ const archiverReducer = (state,action) => {
       return initialeState.archive;
     }
 
-    case CONTROLE_CHAMPS:{
-      let cptNumero = 0;
-      let cptEtoile = 0;
-      let i;
-      let j;
-      for(i=0; i<5; i++){
-        if(action.objetArchive.numeros[i]>0 && action.objetArchive.numeros[i]<51){
-          cptNumero++;
-        }
-      }
-      for(j=0; j<2; j++){
-        if(action.objetArchive.etoiles[j]>0 && action.objetArchive.etoiles[j]<13){
-          cptEtoile++;
-        }
-      }
-
-      if(cptEtoile===2 && cptNumero===5){
-        return {message: state.archive.message, hidden: true};
-      }else{
-        return {message: state.archive.message, hidden: false};
-      }
-    }
-
     default:{
       return state.archive;
     }
   }
 }
+
 export default function(state = initialeState,action){
   return {
-    tirage:jouerReducer(state,action),
-    archive:archiverReducer(state,action)
+    tirage: jouerReducer(state,action),
+    archive: archiverReducer(state,action),
+    listeTirages: listeTiragesReducer(state,action),
+    basicToken: loginReducer(state,action)
   }
 };

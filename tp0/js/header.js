@@ -1,6 +1,6 @@
 import React from 'react';
 import className from 'classnames';
-import { Link } from 'react-router'
+import { Link } from 'react-router';
 
 export default class Header extends React.Component {
   render() {
@@ -12,7 +12,7 @@ export default class Header extends React.Component {
           </div>
           <ul className="nav navbar-nav">
             <li><Link activeClassName='active' to="/jouer">Play</Link></li>
-            <li><Link activeClassName='active' to="/archiver">Archive</Link></li>
+            <li><Link activeClassName='active' to="/listeTirages">Liste Tirages</Link></li>
           </ul>
           <ul className="nav navbar-nav navbar-right">
             <li className="dropdown">

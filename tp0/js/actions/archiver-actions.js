@@ -1,14 +1,17 @@
-import { requestObjetArchive } from '../service/archiver-service';
-
+import { requestObjetArchive, requestDelete } from '../service/archiver-service';
+import { loadMongo } from './listeTirages-actions';
 
 export const SEND_OBJET_ARCHIVE = "SEND_OBJET_ARCHIVE";
 
-export const sendObjetArchive = (objetArchive) => {
+export const sendObjetArchive = (objetArchive,basicToken) => {
   return (dispatch) => {
-    requestObjetArchive(objetArchive)
+    requestObjetArchive(objetArchive,basicToken)
       .then((response)=>{
         dispatch(sendArchiveAction(response))
-      });
+      })
+      .then(()=>{
+        dispatch(loadMongo(basicToken));
+      })
   };
 };
 const sendArchiveAction = (value) => {
@@ -18,19 +21,21 @@ const sendArchiveAction = (value) => {
   };
 };
 
-
-export const RESET_CHAMPS_ARCHIVER = "RESET_CHAMPS_ARCHIVER";
-
-export const resetChampsArchiver = () => {
-  return {
-    type: RESET_CHAMPS_ARCHIVER
+export const DELETE_ARCHIVE = "DELETE_ARCHIVE";
+export const deleteArchive = (id,basicToken) => {
+  return (dispatch) => {
+    requestDelete(id,basicToken)
+      .then(()=>{
+        dispatch(deleteAction());
+      })
+      .then(()=>{
+        dispatch(loadMongo(basicToken));
+      })
   };
 };
-export const CONTROLE_CHAMPS = "CONTROLE_CHAMPS";
 
-export const controleChamps = (objetArchive) => {
+const deleteAction = () => {
   return {
-    type: CONTROLE_CHAMPS,
-    objetArchive
+    type: DELETE_ARCHIVE
   };
 };
