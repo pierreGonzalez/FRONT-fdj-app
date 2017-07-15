@@ -1,7 +1,7 @@
 import { SEND_DATE } from '../actions/jouer-actions';
 import { SEND_OBJET_ARCHIVE, RESET_CHAMPS_ARCHIVER,CONTROLE_CHAMPS } from '../actions/archiver-actions';
 import { LISTE_TIRAGES } from '../actions/listeTirages-actions';
-import { LOGIN } from '../actions/login-actions';
+import { LOGIN, LOGOUT } from '../actions/login-actions';
 
 const initialeState = {
   tirage: {
@@ -43,6 +43,9 @@ const loginReducer = (state,action) => {
   switch (action.type){
     case LOGIN:{
       return action.basicToken;
+    }
+    case LOGOUT:{
+      return  initialeState.basicToken;
     }
     default:{
       return state.basicToken;

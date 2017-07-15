@@ -4,6 +4,7 @@ import { Link } from 'react-router';
 
 export default class Header extends React.Component {
   render() {
+    const user = this.props.basicToken !=="" ? "loged as Pierre" : "log in"
     return (
       <nav className="navbar-inverse" role="navigation">
         <div className="container-fluid">
@@ -17,7 +18,7 @@ export default class Header extends React.Component {
           <ul className="nav navbar-nav navbar-right">
             <li className="dropdown">
               <Link activeClassName='active' to="/login">
-                <span className="glyphicon glyphicon-user"></span>
+                {user} <span className="glyphicon glyphicon-user"></span>
               </Link>
             </li>
           </ul>

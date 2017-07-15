@@ -10,7 +10,13 @@ body{
   width: 80%;
   border-radius: 5px;
   padding :50px;
-  background-color: #f2f2f2
+  background-color: #f2f2f2;
+  height: 500px;
+  overflow: auto;
+}
+
+.container::-webkit-scrollbar{
+  display: none;
 }
 .blockquote{
   border-left: 2px solid black;

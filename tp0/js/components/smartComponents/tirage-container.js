@@ -21,9 +21,9 @@ const mapDispatchToProps = (dispatch) => {
   }
 };
 
-const listeTiragesContainer = connect(
+const tirageContainer = connect(
   mapStateToProps,
   mapDispatchToProps
 )(tirage);
 
-export default listeTiragesContainer;
+export default tirageContainer;

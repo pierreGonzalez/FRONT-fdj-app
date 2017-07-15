@@ -41,11 +41,11 @@ export default class ListeTirages extends React.Component {
     const {hidden} = this.props;
     const {listeTirages} = this.props;
     const elements = this.props.listeTirages.map(tirage => <Tirage key={tirage.id} tirage={tirage} />)
-    const message = this.isLoged();
+    const buttonAction = this.isLoged();
     return (
       <div className="container">
         <div>
-          {message}
+          {buttonAction}
         </div>
         <table className="table table-striped">
           <thead>

@@ -14,3 +14,17 @@ const doLoginAction = (basicToken) => {
     basicToken
   };
 };
+
+export const LOGOUT = "LOGOUT";
+
+export const doLogout = () => {
+  return (dispatch) => {
+    dispatch(doLogoutAction());
+  };
+};
+
+const doLogoutAction = () => {
+  return {
+    type: LOGOUT
+  }
+}

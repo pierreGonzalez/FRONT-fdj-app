@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { doLogin } from '../../actions/login-actions';
+import { doLogin, doLogout } from '../../actions/login-actions';
 import login from '../dumbComponents/login';
 
 const mapStateToProps = (state) => {
@@ -12,6 +12,9 @@ const mapDispatchToProps = (dispatch) => {
   return {
     doLogin: (token) => {
       dispatch(doLogin(token));
+    },
+    doLogout: () => {
+      dispatch(doLogout());
     }
   }
 };
