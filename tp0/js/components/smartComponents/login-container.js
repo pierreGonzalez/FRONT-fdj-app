@@ -4,7 +4,7 @@ import login from '../dumbComponents/login';
 
 const mapStateToProps = (state) => {
     return {
-      basicToken: state.basicToken
+      basicToken: state.login.basicToken
     }
 };
 

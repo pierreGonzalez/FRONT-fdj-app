@@ -14,7 +14,10 @@ const initialeState = {
     hidden: false
   },
   listeTirages: [],
-  basicToken: ""
+  login: {
+    basicToken: "",
+    userName: "log in"
+  }
 };
 
 const jouerReducer = (state,action) => {
@@ -42,13 +45,13 @@ const listeTiragesReducer = (state,action) => {
 const loginReducer = (state,action) => {
   switch (action.type){
     case LOGIN:{
-      return action.basicToken;
+      return (action.login);
     }
     case LOGOUT:{
-      return  initialeState.basicToken;
+      return (initialeState.login) ;
     }
     default:{
-      return state.basicToken;
+      return (state.login);
     }
   }
 }
@@ -74,6 +77,6 @@ export default function(state = initialeState,action){
     tirage: jouerReducer(state,action),
     archive: archiverReducer(state,action),
     listeTirages: listeTiragesReducer(state,action),
-    basicToken: loginReducer(state,action)
+    login: loginReducer(state,action)
   }
 };

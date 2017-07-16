@@ -3,7 +3,7 @@ import header from '../dumbComponents/header';
 
 const mapStateToProps = (state) => {
     return {
-      basicToken: state.basicToken
+      userName: state.login.userName
     }
 };
 

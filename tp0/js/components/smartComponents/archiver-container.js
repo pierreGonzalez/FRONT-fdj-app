@@ -8,7 +8,7 @@ const mapStateToProps = (state, ownProps) => {
       archive: state.archive.message,
       tirage: _.find(state.listeTirages, {id: ownProps.params.id}) || {},
       hidden: state.archive.hidden,
-      basicToken: state.basicToken
+      basicToken: state.login.basicToken
     }
 };
 

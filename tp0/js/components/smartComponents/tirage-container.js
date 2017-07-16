@@ -6,7 +6,7 @@ import tirage from '../dumbComponents/tirage';
 const mapStateToProps = (state,ownProps) => {
     return {
       id: ownProps.tirage.id,
-      basicToken: state.basicToken
+      basicToken: state.login.basicToken
     }
 };
 

@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 
 export default class Header extends React.Component {
   render() {
-    const user = this.props.basicToken !=="" ? "loged as Pierre" : "log in"
+    const user = this.props.userName;
     return (
       <nav className="navbar-inverse" role="navigation">
         <div className="container-fluid">

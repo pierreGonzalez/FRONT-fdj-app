@@ -1,17 +1,25 @@
+import { requestUserName } from '../service/login-service';
 
 export const LOGIN = "LOGIN";
 
 export const doLogin = (token) => {
   let basicToken = btoa(token);
   return (dispatch) => {
-    dispatch(doLoginAction(basicToken));
+    requestUserName(basicToken)
+    .then((userName)=>{
+      dispatch(doLoginAction(basicToken,userName));
+    });
   };
 };
 
-const doLoginAction = (basicToken) => {
+const doLoginAction = (basicToken,userName) => {
+  let login = {
+    basicToken,
+    userName
+  };
   return {
     type: LOGIN,
-    basicToken
+    login
   };
 };
 
