@@ -7,7 +7,11 @@ export const doLogin = (token) => {
   return (dispatch) => {
     requestUserName(basicToken)
     .then((userName)=>{
-      dispatch(doLoginAction(basicToken,userName));
+      if(userName === "login error"){
+        dispatch(doLoginAction("","Wrong login or password"));
+      }else{
+        dispatch(doLoginAction(basicToken,userName));
+      }
     });
   };
 };
@@ -22,6 +26,7 @@ const doLoginAction = (basicToken,userName) => {
     login
   };
 };
+
 
 export const LOGOUT = "LOGOUT";
 

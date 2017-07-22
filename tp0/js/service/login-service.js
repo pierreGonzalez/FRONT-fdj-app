@@ -9,7 +9,10 @@ export const requestUserName = (basicToken) => {
       },
       crossDomain: true,
       method:"GET"
-  }).then((response)=>{
+  }).then((response) => {
       return response.text();
+    })
+    .catch((error) => {
+      return ("login error");
     });
 };

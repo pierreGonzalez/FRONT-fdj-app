@@ -33,34 +33,35 @@ export default class ListeTirages extends React.Component {
         </div>
       );
     }
-
   }
 
   render () {
     const {archive} = this.props;
     const {hidden} = this.props;
     const {listeTirages} = this.props;
-    const elements = this.props.listeTirages.map(tirage => <Tirage key={tirage.id} tirage={tirage} />)
+    const elements = this.props.listeTirages.map(tirage => <Tirage key={tirage.id} tirage={tirage} />);
     const buttonAction = this.isLoged();
     return (
       <div className="container">
         <div>
           {buttonAction}
         </div>
-        <table className="table table-striped">
-          <thead>
-            <tr>
-              <th>Date</th>
-              <th>Numero</th>
-              <th>Etoile</th>
-              <th>D</th>
-              <th>U</th>
-            </tr>
-          </thead>
-          <tbody>
-            {elements}
-          </tbody>
-        </table>
+
+          <table className="table table-striped">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Numero</th>
+                <th>Etoile</th>
+                <th>D</th>
+                <th>U</th>
+              </tr>
+            </thead>
+            <tbody>
+              {elements}
+            </tbody>
+          </table>
+
       </div>
     );
   }

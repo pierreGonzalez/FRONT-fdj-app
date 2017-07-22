@@ -17,7 +17,8 @@ const initialeState = {
   login: {
     basicToken: "",
     userName: "log in"
-  }
+  },
+  erreurLogin:""
 };
 
 const jouerReducer = (state,action) => {

@@ -11,15 +11,12 @@ export default class Login extends React.Component {
     if(this.refs.user.value.match(emailFormat)){
       token = this.refs.user.value+":"+this.refs.pwd.value;
       this.props.doLogin(token);
-
+      {/* Reste des champs */}
       this.refs.user.value = "";
       this.refs.pwd.value = "";
-    }else{
-      {/*Trouver un moyen d'afficher un mesg d'erreur sans passer*/}
-      console.log("format email not good !");
     }
-    {/*Trouver un moyen de rediriger*/}
   }
+
   logout(){
       this.props.doLogout();
   }
@@ -44,7 +41,7 @@ export default class Login extends React.Component {
         </form>
 
       );
-    } else{
+    } else {
       return(
         <div className="btn-group btn-group-justified">
           <Link className="btn btn-warning" to="/listeTirages" onClick={this.logout.bind(this)}>
@@ -60,10 +57,12 @@ export default class Login extends React.Component {
 
     return (
       <div className="container">
-        <div className="panel panel-info">
-          <div className="panel-heading">Login form</div>
-          <div className="panel-body">
-            {loginButton}
+        <div className="loginClass">
+          <div className="panel panel-info">
+            <div className="panel-heading">Login form</div>
+            <div className="panel-body">
+              {loginButton}
+            </div>
           </div>
         </div>
       </div>

@@ -20,9 +20,6 @@ server.app.use(express.static(nodeModules));
 // Add body-parser
 server.app.use(require('body-parser').json());
 
-// Add Rules API
-require('./rules-api')(server.app);
-
 server.listen(config.port, 'localhost', function (err, result) {
   if (err) {
     console.log(err);

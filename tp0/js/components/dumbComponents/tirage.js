@@ -15,6 +15,7 @@ export default class Tirage extends React.Component {
       return (<span>{etoile.etoile} </span>);
     });
     const date = new Date(tirage.date).toLocaleString();
+    
     return (
       <tr>
         <td>{date}</td>
