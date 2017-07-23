@@ -11,7 +11,7 @@ export default class Home extends React.Component {
           <blockquote className="blockquote">
             <p>Trust me I will tell you the combinaton to play*</p>
             <h6>but don&apos;t tell to anyone it&apos;s a secret ...</h6>
-            <footer>Combinaton generator v1.0.1</footer>
+            <footer>Combinaton generator v1.1.0</footer>
             <footer>*This application is a personal code training</footer>
           </blockquote>
         </div>
