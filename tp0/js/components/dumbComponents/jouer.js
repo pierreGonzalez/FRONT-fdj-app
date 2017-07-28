@@ -18,8 +18,7 @@ export default class Jouer extends React.Component {
     const {tirage} = this.props;
 
     return (
-      <div className="container">
-        <div className="loginClass">
+      <div className="jouerPanel">
           <div className="panel panel-info">
             <div className="panel-heading">
               <div className="form-group">
@@ -64,7 +63,6 @@ export default class Jouer extends React.Component {
               </table>
             </div>
           </div>
-        </div>
       </div>
     );
   }

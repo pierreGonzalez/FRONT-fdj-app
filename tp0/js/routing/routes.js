@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import { Router, Route, IndexRoute } from 'react-router';
 import Layout from '../layout';
-import Home from '../components/dumbComponents/home';
+import Home from '../components/smartComponents/home-container';
 import Jouer from '../components/smartComponents/jouer-container';
 import Archiver from '../components/smartComponents/archiver-container';
 import Login from '../components/smartComponents/login-container';

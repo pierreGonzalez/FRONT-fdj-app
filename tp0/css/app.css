@@ -1,77 +1,43 @@
-/**
- * Fichier css principal.
- */
 
 body{
-  background-color: #3e5066;
+  background-color: rgb(77, 77, 77);
 }
-.container{
-  margin-top: 100px;
-  width: 80%;
-  border-radius: 5px;
-  padding : 50px;
-  background-color: #f2f2f2;
-  height: 500px;
-  overflow: scroll;
+.col-md-12{
+  margin: 5px;
+  width: 99%;
+  background-color: rgb(204, 238, 255);
+  text-align: center;
 }
-
-.container::-webkit-scrollbar{
-  display: none;
+.col-md-3{
+  border: 3px solid black;
+  background-color: red;
 }
-.blockquote{
-  border-left: 2px solid black;
+.col-md-9{
+  border: 3px solid black;
+  background-color: orange;
 }
-.jumbotron{
-  background-color: #e0e0e0;
+.top{
+  height: 200px;
 }
-.c3po{
-  width: 150px;
-}
-form{
-  margin: auto;
-}
-.searchGlyph{
-  color: #ff5500;
-}
-.msgAlert{
-  padding-top: 30px;
-}
-
-.archiverClass{
-  padding-top: 7%;
-  margin: auto;
-  width: 100%;
-}
-.homeClass{
-  padding-top: 7%;
-  margin: auto;
-  width: 100%;
+.bottom{
   height: 400px;
 }
-
-.loginClass{
-  padding-top: 7%;
-  margin: auto;
-  width: 80%;
+.jouerPanel{
+  padding-top: 10%;
 }
-
-.panel{
-  box-shadow: 0 25px 8px -10px rgba(0, 0, 0, 0.2);
-  animation: opening 500ms ease-in-out;
+.userImage{
+  margin-left: 18%;
+  margin-top: 6%;
+  background-color: green;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  box-shadow: 0 30px 15px -15px rgba(153, 0, 0, 0.8);
 }
-
-td{
-  color: #3e5066;
-}
-tr{
-  animation: opening 500ms ease-in-out;
-}
-
-@keyframes opening{
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.c3po{
+  margin-left: -16px;
+  margin-top: -13px;
+  width: 180px;
+  height: 180px;
 }
