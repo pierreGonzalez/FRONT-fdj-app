@@ -4,7 +4,6 @@ import Header from './components/smartComponents/header-container';
 
 const Layout = ({ children }) => (
     <div>
-      <Header/>
       <div>
         {children}
       </div>

@@ -12,6 +12,7 @@ import ListeArchives from '../components/smartComponents/listeTirages-container'
 export default(
   <Route path='/' component={Layout}>
     <IndexRoute component={Home} />
+    <Route path='/home' component={Home}/>
     <Route path='/jouer' component={Jouer}/>
     <Route path='/archiver' component={Archiver}/>
     <Route path='/archiver/:id' component={Archiver}/>

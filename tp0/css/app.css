@@ -1,43 +1,73 @@
 
 body{
-  background-color: rgb(77, 77, 77);
+  background-color: rgb(0, 51, 77);
+  margin-top: 60px;
 }
-.col-md-12{
-  margin: 5px;
-  width: 99%;
-  background-color: rgb(204, 238, 255);
+.page{
+  margin: auto;
   text-align: center;
 }
 .col-md-3{
-  border: 3px solid black;
-  background-color: red;
+  background-color: rgb(153, 221, 255);
 }
 .col-md-9{
-  border: 3px solid black;
-  background-color: orange;
+  border-left: 2px solid black;
+  background-color: rgb(204, 239, 255);
 }
 .top{
   height: 200px;
 }
 .bottom{
+  border-top: 2px solid black;
   height: 400px;
 }
 .jouerPanel{
-  padding-top: 10%;
+  padding-top: 90px;
 }
+.verticalMenu{
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  margin-top: 100px;
+  box-shadow: 0 20px 15px -7px rgba(0, 0, 0, 0.3);
+}
+.navBouton{
+  padding-top: 9px;
+  width: 100px;
+  height: 40px;
+  background-color: rgb(0, 122, 179);
+
+}
+.linkNav:link{
+  color: white;
+}
+.navBouton:active{
+  background-color: rgb(0, 51, 77);
+  color: white;
+}
+.navBouton:hover{
+  background-color: rgb(0, 105, 153);
+}
+.linkNav:hover{
+  text-decoration: none;
+}
+
 .userImage{
-  margin-left: 18%;
-  margin-top: 6%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4%;
   background-color: green;
   border-radius: 50%;
   width: 150px;
   height: 150px;
   overflow: hidden;
-  box-shadow: 0 30px 15px -15px rgba(153, 0, 0, 0.8);
+  box-shadow: 0 30px 15px -15px rgba(0, 0, 0, 0.4);
 }
 .c3po{
-  margin-left: -16px;
-  margin-top: -13px;
-  width: 180px;
+  margin-left: auto;
+  margin-right: auto;
   height: 180px;
+}
+.userName{
+  margin-top: 10px;
 }
