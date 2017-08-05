@@ -16,6 +16,9 @@ const mapDispatchToProps = (dispatch) => {
   return{
     sendObjetArchive: (objetArchive,basicToken) => {
       dispatch(sendObjetArchive(objetArchive,basicToken));
+    },
+    resetChampsArchiver: () => {
+      dispatch(resetChampsArchiver());
     }
   }
 };

@@ -15,14 +15,14 @@ export default class Tirage extends React.Component {
       return (<span>{etoile.etoile} </span>);
     });
     const date = new Date(tirage.date).toLocaleString();
-    
+
     return (
       <tr>
         <td>{date}</td>
         <td>{numeros}</td>
         <td>{etoiles}</td>
-        <td><Link to="/listeTirages"><span className="glyphicon glyphicon-remove" onClick={this.delete.bind(this)}></span></Link></td>
-        <td><Link to={`/archiver/${tirage.id}`}><span className="glyphicon glyphicon-pencil"></span></Link></td>
+        <td><Link className="linkNavRed" to="/listeTirages"><span className="glyphicon glyphicon-remove" onClick={this.delete.bind(this)}></span></Link></td>
+        <td><Link className="linkNav" to={`/archiver/${tirage.id}`}><span className="glyphicon glyphicon-pencil"></span></Link></td>
       </tr>
     );
   }

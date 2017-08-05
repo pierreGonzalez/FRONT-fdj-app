@@ -5,6 +5,7 @@ import { Link } from 'react-router';
 
 export default class Archiver extends React.Component {
   componentDidMount(){
+    this.props.resetChampsArchiver();
     if(this.props.tirage.id){
       let tirage = this.props.tirage;
       this.refs.n1.value=tirage.numeros[0].numero;

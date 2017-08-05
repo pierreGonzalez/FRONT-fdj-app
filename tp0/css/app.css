@@ -1,29 +1,91 @@
 
 body{
   background-color: rgb(0, 51, 77);
-  margin-top: 60px;
 }
 .page{
-  margin: auto;
+  margin-top: 200px;
   text-align: center;
+  font-family: Copperplate,Copperplate Gothic Light,fantasy;
 }
-.col-md-3{
-  background-color: rgb(153, 221, 255);
+.listeTirages{
+  font-family: Copperplate,Copperplate Gothic Light,fantasy;
+  margin-top: 10px;
+  height: 365px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.listeTirages::-webkit-scrollbar {
+    display: none;
+}
+.listeTiragesButtons{
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+}
+.header{
+  background-image: url('../../../img/piet-mondrian_1911-1911_the-grey-tree.jpg');
+  background-size: 100%;
+  background-position: 0% 60%;
+  padding-top: 50px;
+  height:150px;
+  background-color: black;
+}
+.table{
+}
+.left{
+  padding-top: 50px;
+  color: grey;
+  /*background-color: rgb(153, 221, 255);*/
 }
 .col-md-9{
   border-left: 2px solid black;
-  background-color: rgb(204, 239, 255);
+  /*background-color: rgb(204, 239, 255);*/
+}
+.panelInput{
+  padding-top: 125px;
+}
+.combinaison{
+  border-bottom: 1px solid grey;
+}
+.combinaisonValue{
+  color: white;
+  padding-top: 7px;
+}
+.important{
+  color: rgb(255, 92, 51);
+}
+input[type=date]{
+  color: white;
+  text-align: center;
+  border: none;
+  background-color: rgba(255,255,255,0.1);
+}
+input[type=text]{
+  font-family: Avant Garde,Avantgarde,Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+  color: white;
+  text-align: center;
+  border: none;
+  background-color: rgba(255,255,255,0.1);
+}
+input[type=password]{
+  font-family: Avant Garde,Avantgarde,Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+  color: white;
+  text-align: center;
+  border: none;
+  background-color: rgba(255,255,255,0.1);
 }
 .top{
-  height: 200px;
+  height: 300px;
 }
-.bottom{
-  border-top: 2px solid black;
-  height: 400px;
+.welcomeText{
+  color: white;
+  padding-top: 125px;
 }
-.jouerPanel{
-  padding-top: 90px;
+.welcomeText:hover{
+  cursor: pointer;
 }
+
 .verticalMenu{
   margin-left: auto;
   margin-right: auto;
@@ -36,13 +98,12 @@ body{
   width: 100px;
   height: 40px;
   background-color: rgb(0, 122, 179);
-
-}
-.linkNav:link{
-  color: white;
 }
 .navBouton:active{
   background-color: rgb(0, 51, 77);
+  color: white;
+}
+.linkNav:link{
   color: white;
 }
 .navBouton:hover{
@@ -50,18 +111,36 @@ body{
 }
 .linkNav:hover{
   text-decoration: none;
+  color: white;
+}
+.linkNav:visited{
+  text-decoration: none;
+  color: white;
+}
+.linkNavRed:link{
+  color: red;
+}
+.linkNavRed:hover{
+  text-decoration: none;
+  color: red;
+}
+.linkNavRed:visited{
+  text-decoration: none;
+  color: red;
 }
 
 .userImage{
   margin-left: auto;
   margin-right: auto;
-  margin-top: 4%;
   background-color: green;
   border-radius: 50%;
   width: 150px;
   height: 150px;
   overflow: hidden;
   box-shadow: 0 30px 15px -15px rgba(0, 0, 0, 0.4);
+}
+.c3po:hover{
+  cursor: pointer;
 }
 .c3po{
   margin-left: auto;

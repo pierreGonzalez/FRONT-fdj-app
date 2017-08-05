@@ -5,7 +5,8 @@ import listeTirages from '../dumbComponents/listeTirages';
 const mapStateToProps = (state) => {
     return {
       listeTirages: state.listeTirages,
-      basicToken: state.login.basicToken
+      basicToken: state.login.basicToken,
+      userName: state.login.userName
     }
 };
 

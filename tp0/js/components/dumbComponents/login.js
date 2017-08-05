@@ -24,29 +24,36 @@ export default class Login extends React.Component {
   logButton(){
     if(this.props.basicToken === ""){
       return(
-        <form>
-          <div className="form-group">
-            <label htmlFor="email">userName:</label>
-            <input type="text" className="form-control" id="user" ref="user"/>
-          </div>
-          <div className="form-group">
-            <label htmlFor="pwd">passWord:</label>
-            <input type="password" className="form-control" id="pwd" ref="pwd"/>
-          </div>
-          <div className="btn-group btn-group-justified">
-            <Link className="btn btn-info" to="/listeTirages" onClick={this.loger.bind(this)}>
-              <span>login</span>
-            </Link>
-          </div>
-        </form>
 
+        <div className="panelInput">
+          <div className="col-md-12">
+            <div className="combinaison col-md-4">
+              <input type="text" className="form-control" placeholder="userName" id="user" ref="user"/>
+            </div>
+            <div className="combinaison col-md-4">
+              <input type="password" className="form-control" placeholder="passWord" id="pwd" ref="pwd"/>
+            </div>
+            <div className="col-md-4">
+              <Link className="btn btn-default btn-block" to="/listeTirages" onClick={this.loger.bind(this)}>
+                <span>login</span>
+              </Link>
+            </div>
+          </div>
+        </div>
       );
     } else {
       return(
-        <div className="btn-group btn-group-justified">
-          <Link className="btn btn-warning" to="/listeTirages" onClick={this.logout.bind(this)}>
-            <span>logout</span>
-          </Link>
+        <div className="panelInput">
+          <div className="col-md-6">
+            <Link className="btn btn-warning btn-block" to="/home" onClick={this.logout.bind(this)}>
+              <span>logout</span>
+            </Link>
+          </div>
+          <div className="col-md-6">
+            <Link className="btn btn-default btn-block" to="/listeTirages">
+              <span>Tirage List</span>
+            </Link>
+          </div>
         </div>
       );
     }
@@ -56,15 +63,8 @@ export default class Login extends React.Component {
     const loginButton = this.logButton();
 
     return (
-      <div className="container">
-        <div className="loginClass">
-          <div className="panel panel-info">
-            <div className="panel-heading">Login form</div>
-            <div className="panel-body">
-              {loginButton}
-            </div>
-          </div>
-        </div>
+      <div>
+        {loginButton}
       </div>
     );
   }

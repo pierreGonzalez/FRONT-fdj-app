@@ -2,7 +2,6 @@ import { requestObjetArchive, requestDelete } from '../service/archiver-service'
 import { loadMongo } from './listeTirages-actions';
 
 export const SEND_OBJET_ARCHIVE = "SEND_OBJET_ARCHIVE";
-
 export const sendObjetArchive = (objetArchive,basicToken) => {
   return (dispatch) => {
     requestObjetArchive(objetArchive,basicToken)
@@ -37,5 +36,25 @@ export const deleteArchive = (id,basicToken) => {
 const deleteAction = () => {
   return {
     type: DELETE_ARCHIVE
+  };
+};
+
+export const RESET_CHAMPS_ARCHIVER = "RESET_CHAMPS_ARCHIVER";
+// export const resetChampsArchiver = () => {
+//   return (dispatch) => {
+//         dispatch(resetChampsArchiverAction());
+//   };
+// };
+//
+// const resetChampsArchiverAction = () => {
+//   return {
+//     type: RESET_CHAMPS_ARCHIVER
+//   };
+// };
+export const resetChampsArchiver = () => {
+  return (dispatch) => {
+        dispatch({
+          type: RESET_CHAMPS_ARCHIVER
+        });
   };
 };
