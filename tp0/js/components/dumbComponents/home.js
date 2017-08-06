@@ -47,7 +47,7 @@ export default class Home extends React.Component {
     }
   }
   render () {
-    const userName = (this.props.userName === "log in")?"Vader_Smokes":this.props.userName;
+    const userName = (this.props.userName === "log in" || this.props.userName ==="Wrong login or password")?"Vader_Smokes":this.props.userName;
     const src=`../../../img/${userName}.jpg`;
     const welcomeData = this.rightPaneldata();
 

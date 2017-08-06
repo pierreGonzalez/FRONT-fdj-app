@@ -45,7 +45,7 @@ export default class ListeTirages extends React.Component {
     const {listeTirages} = this.props;
     const elements = this.props.listeTirages.map(tirage => <Tirage key={tirage.id} tirage={tirage} />);
     const buttonAction = this.isLoged();
-    const userName = (this.props.userName === "log in")?"Vader_Smokes":this.props.userName;
+    const userName = (this.props.userName === "log in" || this.props.userName ==="Wrong login or password")?"Vader_Smokes":this.props.userName;
     const src=`../../../img/${userName}.jpg`;
 
     return (
