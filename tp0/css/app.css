@@ -31,8 +31,6 @@ body{
   height:150px;
   background-color: black;
 }
-.table{
-}
 .left{
   padding-top: 50px;
   color: grey;
@@ -51,6 +49,9 @@ body{
 .combinaisonValue{
   color: white;
   padding-top: 7px;
+}
+.archiverClass{
+  padding-left: 100px;
 }
 .important{
   color: rgb(255, 92, 51);
@@ -139,14 +140,21 @@ input[type=password]{
   overflow: hidden;
   box-shadow: 0 30px 15px -15px rgba(0, 0, 0, 0.4);
 }
+.c3poArea{
+  padding-left: 150px;
+}
 .c3po:hover{
   cursor: pointer;
 }
 .c3po{
   margin-left: auto;
   margin-right: auto;
-  height: 180px;
+  height: 150px;
 }
 .userName{
   margin-top: 10px;
+}
+.alert{
+  margin-top: 25px;
+  height: 100px;
 }
