@@ -26,7 +26,7 @@ export default class Jouer extends React.Component {
             <input type="date" className="form-control" id="date" ref='inputDate' />
           </div>
           <div className="combinaison col-md-6 combinaisonValue">
-            <p>P: {tirage.precision.toFixed(2)} %, Combinaison: <span className="important">{numeros}</span> - <span className="important">{etoiles}</span></p>
+            <p>P: {tirage.precision.toFixed(2)} % , Combinaison: <span className="important">{numeros}</span> - <span className="important">{etoiles}</span></p>
           </div>
           <div className="col-md-3">
             <button className="btn btn-default btn-block" type="button" onClick={this.sendDate.bind(this)}>

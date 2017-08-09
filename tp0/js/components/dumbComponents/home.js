@@ -54,13 +54,13 @@ export default class Home extends React.Component {
     return (
         <div className="page">
           <div className="col-md-12">
-            <div className="col-md-3 top left">
+            <div className="col-md-3 row left">
               <div className="userImage">
                 <img className="c3po" onClick={this.loginAction.bind(this)} src={src}/>
               </div>
               <p className="userName">{userName}</p>
             </div>
-            <div className="col-md-9 top">
+            <div className="col-md-9 row">
               {welcomeData}
             </div>
           </div>
