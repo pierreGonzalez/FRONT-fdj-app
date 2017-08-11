@@ -28,10 +28,10 @@ export default class Login extends React.Component {
         <div className="panelInput">
           <div className="col-md-12">
             <div className="combinaison col-md-4">
-              <input type="text" className="form-control" placeholder="userName" id="user" ref="user"/>
+              <input type="text" className="form-control" placeholder="pierre" id="user" ref="user"/>
             </div>
             <div className="combinaison col-md-4">
-              <input type="password" className="form-control" placeholder="passWord" id="pwd" ref="pwd"/>
+              <input type="password" className="form-control" placeholder="youRamazing" id="pwd" ref="pwd"/>
             </div>
             <div className="col-md-4">
               <Link className="btn btn-default btn-block" to="/listeTirages" onClick={this.loger.bind(this)}>
